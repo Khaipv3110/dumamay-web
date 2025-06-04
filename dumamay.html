@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>DumaMay 😭</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive;
+      position: relative;
+    }
+
+    .text {
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff00aa;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const message = "dumamay Nữ tao đói quá 😩😭";
+  const count = 100;
+
+  for (let i = 0; i < count; i++) {
+    const span = document.createElement("div");
+    span.className = "text";
+    span.textContent = message;
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.top = Math.random() * 100 + "vh";
+    span.style.fontSize = (16 + Math.random() * 24) + "px";
+    span.style.animationDuration = (5 + Math.random() * 10) + "s";
+    document.body.appendChild(span);
+  }
+</script>
+
+</body>
+</html>
